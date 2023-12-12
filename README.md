@@ -22,8 +22,21 @@
 - Please check the [**Model**](https://github.com/GAIR-NLP/abel/#models-and-performance) and [**Leaderboard**](https://github.com/GAIR-NLP/abel/#Leaderboard-for-Mathematical-Reasoning) for the latest results. We achieved an accuracy of over **80%** on GSM8K for the first time with **7B** model.
 - Refer to the [**Generalization**](https://github.com/GAIR-NLP/abel/#Generalization) section for our evaluation results on the model's generalization capabilities.
 
+## Models and Performance
+
+| Model Name        | HF Checkpoints                                               | GSM8k              | MATH               | License                                                      |
+| ----------------- | ------------------------------------------------------------ | ------------------ | ------------------ | ------------------------------------------------------------ |
+| Abel-7B-002 | 🤗 <a href="https://huggingface.co/GAIR/Abel-7B-002" target="_blank">7B</a> | **80.44**  | **29.46**  | [Apache License 2.0](https://www.apache.org/licenses/) |
+| Abel-7B-001  | 🤗 <a href="https://huggingface.co/GAIR/GAIRMath-Abel-7b" target="_blank">7B</a> | **59.74** (+ 4.84) | **13.00** (+ 2.30) | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
+| Abel-13B-001 | 🤗 <a href="https://huggingface.co/GAIR/GAIRMath-Abel-13b" target="_blank">13B</a> | **66.41** (+ 2.51) | **17.34** (+ 3.34) | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
+| Abel-70B-001 | 🤗 <a href="https://huggingface.co/GAIR/GAIRMath-Abel-70b" target="_blank">70B</a> | **83.62** (+ 2.02) | **28.26** (+ 5.56) | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
 
 
+
+* numbers in ``()'' represent improvement against previous SOTA open-sourced methods, i.e., WizardMath.
+
+
+## Introduction
 📝 `Abel` is created as a tribute to [Niels Henrik Abel](https://en.wikipedia.org/wiki/Niels_Henrik_Abel) for his groundbreaking work in algebra and analysis, at which our model is relatively better as well. There is still a long way for us to go, though 🏃‍♂️🏃‍♀️🏁🏃‍♂️🏃‍♀️.
 
 We show that:
@@ -47,18 +60,7 @@ We demonstrate that:
 
 
 
-## Models and Performance
 
-| Model Name        | HF Checkpoints                                               | GSM8k              | MATH               | License                                                      |
-| ----------------- | ------------------------------------------------------------ | ------------------ | ------------------ | ------------------------------------------------------------ |
-| Abel-7B-002 | 🤗 <a href="https://huggingface.co/GAIR/Abel-7B-002" target="_blank">7B-002</a> | **80.44**  | **29.46**  | [Apache License 2.0](https://www.apache.org/licenses/) |
-| Abel-7B-001  | 🤗 <a href="https://huggingface.co/GAIR/GAIRMath-Abel-7b" target="_blank">7B</a> | **59.74** (+ 4.84) | **13.00** (+ 2.30) | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
-| Abel-13B-001 | 🤗 <a href="https://huggingface.co/GAIR/GAIRMath-Abel-13b" target="_blank">13B</a> | **66.41** (+ 2.51) | **17.34** (+ 3.34) | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
-| Abel-70B-001 | 🤗 <a href="https://huggingface.co/GAIR/GAIRMath-Abel-70b" target="_blank">70B</a> | **83.62** (+ 2.02) | **28.26** (+ 5.56) | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
-
-
-
-* numbers in ``()'' represent improvement against previous SOTA open-sourced methods, i.e., WizardMath.
 
 
 ## Leaderboard for Mathematical Reasoning
