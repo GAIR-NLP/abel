@@ -34,18 +34,24 @@ We have established a new **state-of-the-art** performance across open-source LL
 * `GAIRMath-Abel` secures **3 positions in the Top 10 rankings** and stands as the **only university-led project** in the list (others are either star startups or big tech companies).
 * Using our approach, we not only achieved excellent results on GSM8K and MATH, but when given a **new dataset** ([TALSCQ-EN](https://www.mathgpt.com/)), we **quickly** attained state-of-the-art (SOTA) performance without too much effort, surpassing the commercial multi-billion-dollar model [MathGPT](https://www.mathgpt.com/) and GPT4.
   
+
 We demonstrate that:
 * the capabilities of SFT are **significantly underestimated**, and researchers should approach SFT with due reverence and caution
 * exceptional mathematical problem-solving capability can be achieved **solely through SFT**, which elicits more imaginative possibilities in future exploration in this direction.
 
+## News
+🔥[2023/12/12] We utilized the powerful [Mistral-7B](https://mistral.ai/news/announcing-mistral-7b/) model and incorporated a more diverse set of SFT data, resulting in a stronger and more generalized model, **Abel-7B-002**.
+- Please check the [**Model**](https://github.com/GAIR-NLP/abel/#models-and-performance) and [**Leaderboard**](https://github.com/GAIR-NLP/abel/#Leaderboard-for-Mathematical-Reasoning) for the latest results. We achieved an accuracy of over **80%** on GSM8K for the first time with the **7B** model.
+- Refer to the [**Generalization**](https://github.com/GAIR-NLP/abel/#Genelization) section for our recent evaluation results on the model's generalization capabilities.
 
 ## Models and Performance
 
-| Model Name | HF Checkpoints | GSM8k | MATH | License |
-| ----- |------| ---- |------|------|
-| GAIRMath-Abel-70B | 🤗 <a href="https://huggingface.co/GAIR/GAIRMath-Abel-70b" target="_blank">70B</a> | **83.62** (+ 2.02) |  **28.26** (+ 5.56)| [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
-| GAIRMath-Abel-13B | 🤗 <a href="https://huggingface.co/GAIR/GAIRMath-Abel-13b" target="_blank">13B</a> | **66.41** (+ 2.51) |  **17.34** (+ 3.34)| [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
-| GAIRMath-Abel-7B | 🤗 <a href="https://huggingface.co/GAIR/GAIRMath-Abel-7b" target="_blank">7B</a> | **59.74** (+ 4.84) |  **13.00** (+ 2.30) | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
+| Model Name        | HF Checkpoints                                               | GSM8k              | MATH               | License                                                      |
+| ----------------- | ------------------------------------------------------------ | ------------------ | ------------------ | ------------------------------------------------------------ |
+| Abel-7B-002 | 🤗 <a href="https://huggingface.co/GAIR/GAIRMath-Abel-70b" target="_blank">7B-002</a> | **80.28**  | **29.28**  | [Apache License 2.0](https://www.apache.org/licenses/) |
+| GAIRMath-Abel-70B | 🤗 <a href="https://huggingface.co/GAIR/GAIRMath-Abel-70b" target="_blank">70B</a> | **83.62** (+ 2.02) | **28.26** (+ 5.56) | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
+| GAIRMath-Abel-13B | 🤗 <a href="https://huggingface.co/GAIR/GAIRMath-Abel-13b" target="_blank">13B</a> | **66.41** (+ 2.51) | **17.34** (+ 3.34) | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
+| GAIRMath-Abel-7B  | 🤗 <a href="https://huggingface.co/GAIR/GAIRMath-Abel-7b" target="_blank">7B</a> | **59.74** (+ 4.84) | **13.00** (+ 2.30) | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
 
 * numbers in ``()'' represent improvement against previous SOTA open-sourced methods, i.e., WizardMath.
 
@@ -56,43 +62,66 @@ We demonstrate that:
 * `🎓` suggests that model development is led by academic university (instead of companies)
 * We only consider models **without** using any tool (e.g., Python)
 
-| Ranking | Model        | Param. | Leading Organization              | GSM8K | MATH  |
-| :-----: | :----------: | :----: | :-----------------------------------: | :---: | :---: |
-|  🔒 1  | GPT-4        | unknown| [OpenAI](https://openai.com/)                                | 92.0    | 42.5  |
-|  🔒 2  | Claude-2     | unknown| [Anthropic](https://www.anthropic.com/)                             | 88.0    | -     |
-|  🔒 3  | PaLM-2-Flan  | unknown| [Google](https://about.google/)                               | 84.7  | 33.2  |
-|  🌍 4      | GAIRMath-*Abel*         | 70B    | 🎓 [GAIR Lab at Shanghai Jiaotong University](https://plms.ai/)| 83.6  | 28.3  |
-|  🌍 5      | WizardMath   | 70B    | [Microsoft](https://www.microsoft.com/)                            | 81.6  | 22.7  |
-|  🔒 6     | Claude-Instant| unknown| [Anthropic](https://www.anthropic.com/)                           | 80.9  | -     |
-|  🔒 7     | ChatGPT      | unknown| [OpenAI](https://openai.com/)                                | 80.8  | 34.1  |
-|  🔒 8      | ChatGPT-0301 | unknown| [OpenAI](https://openai.com/)                               | 74.9  | -     |
-|  🌍 9     | GAIRMath-*Abel*         | 13B    | 🎓 [GAIR Lab at Shanghai Jiaotong University](https://plms.ai/)| 66.4  | 17.3  |
-|  🌍 10     | GAIRMath-*Abel*         | 7B     | 🎓 [GAIR Lab at Shanghai Jiaotong University](https://plms.ai/)| 59.7 | 13.0  |
-|  🔒 11    | Minerva      | 540B   | [Google](https://about.google/)                               | 58.8  | 33.6  |
-|  🔒 12    | PaLM         | 540B   | [Google](https://about.google/)                               | 56.9  | 8.8   |
-| 🌍 13    | Llama-2      | 70B    | [Meta](https://about.meta.com/)                                 | 56.8  | 13.5  |
-| 🌍 14    | RFT          | 33B    | [OFA](https://github.com/OFA-Sys)                                  | 56.5  | 7.4   |
-| 🌍 15    | Baichuan2-13B| 13B    | [Baichuan](https://www.baichuan-ai.com/home)                             | 52.8  | 10.1 |
-| 🔒 16    | Minerva      | 62B    | [Google](https://about.google/)                               | 52.4  | 27.6  |
-| 🔒 17    | PaLM         | 64B    | [Google](https://about.google/)                               | 52.4  | 4.4   |
-| 🌍 18    | RFT          | 13B    | [OFA](https://github.com/OFA-Sys)                                  | 52.1  | 5.1   |
-| 🌍 19    | LlaMA        | 65B    | [Meta](https://about.meta.com/)                                 | 50.9  | 10.6  |
-| 🌍 20    | QWen         | 7B     | [Alibaba](https://www.alibaba.com/)                              | 44.9  | 8.5   |
-| 🔒 21    | Chinchilla   | 70B    | [DeepMind](https://www.deepmind.com/)                             | 43.7  | -     |
-| 🌍 22    | Llama-2      | 34B    | [Meta](https://about.meta.com/)                                 | 42.2  | 6.24  |
-| 🔒 23    | Galactica    | 30B    | [Meta](https://about.meta.com/)                                 | 41.7  | 12.7  |
-| 🌍 24    | ChatGLM2     | 12B    | [Zhipu](https://www.zhipuai.cn/)                                | 40.9  | -     |
-| 🔒 25    | Text-davinci-002| 175B| [OpenAI](https://openai.com/)                              | 40.7  | 19.1  |
-| 🌍 26    | Llama        | 33B    | [Meta](https://about.meta.com/)                                 | 35.6  | 7.1   |
-| 🔒 27    | GPT-3        | 175B   | [OpenAI](https://openai.com/)                               | 34    | 5.2   |
-| 🌍 28    | InternLM     | 7B     | [Shanghai AI Lab](https://www.shlab.org.cn/)                      | 31.2  | -     |
-| 🌍 29    | Llama-2      | 13B    | [Meta](https://about.meta.com/)                                 | 28.7  | 3.9   |
-| 🌍 30    | Vicuna v1.3  | 13B    | [LMSys](https://lmsys.org/)                                | 27.6  | -     |
-| 🌍 31    | Falcon       | 40B    | [Technology Innovation Institute](https://www.tii.ae/)                               | 19.6  | 2.5   |
-| 🌍 32    | Llama        | 13B    | [Meta](https://about.meta.com/)                                 | 17.8  | 3.9   |
-| 🌍 33    | MPT          | 30B    | [MosaicML](https://www.mosaicml.com/)                                  | 15.2  | 3.1   |
-| 🔒 34    | Galactica    | 6.7B   | [Meta](https://about.meta.com/)                                 | 10.2  | 2.2   |
+| Ranking |      Model       | Param.  |                     Leading Organization                     | GSM8K | MATH |
+| :-----: | :--------------: | :-----: | :----------------------------------------------------------: | :---: | :--: |
+|   🔒 1   |      GPT-4       | unknown |                [OpenAI](https://openai.com/)                 | 92.0  | 42.5 |
+|   🔒 2   |     Claude-2     | unknown |           [Anthropic](https://www.anthropic.com/)            | 88.0  |  -   |
+|   🔒 3   |   PaLM-2-Flan    | unknown |               [Google](https://about.google/)                | 84.7  | 33.2 |
+|   🌍 4   | GAIRMath-*Abel*  |   70B   | 🎓 [GAIR Lab at Shanghai Jiaotong University](https://plms.ai/) | 83.6  | 28.3 |
+|   🌍 5   |    WizardMath    |   70B   |           [Microsoft](https://www.microsoft.com/)            | 81.6  | 22.7 |
+|   🔒 6   |  Claude-Instant  | unknown |           [Anthropic](https://www.anthropic.com/)            | 80.9  |  -   |
+|   🔒 7   |     ChatGPT      | unknown |                [OpenAI](https://openai.com/)                 | 80.8  | 34.1 |
+|   🌍 4   | *Abel*-002  |   7B   | 🎓 [GAIR Lab at Shanghai Jiaotong University](https://plms.ai/) | 80.3  | 29.3 |
+|   🔒 8   |   ChatGPT-0301   | unknown |                [OpenAI](https://openai.com/)                 | 74.9  |  -   |
+|   🌍 9   | GAIRMath-*Abel*  |   13B   | 🎓 [GAIR Lab at Shanghai Jiaotong University](https://plms.ai/) | 66.4  | 17.3 |
+|  🌍 10   | GAIRMath-*Abel*  |   7B    | 🎓 [GAIR Lab at Shanghai Jiaotong University](https://plms.ai/) | 59.7  | 13.0 |
+|  🔒 11   |     Minerva      |  540B   |               [Google](https://about.google/)                | 58.8  | 33.6 |
+|  🔒 12   |       PaLM       |  540B   |               [Google](https://about.google/)                | 56.9  | 8.8  |
+|  🌍 13   |     Llama-2      |   70B   |               [Meta](https://about.meta.com/)                | 56.8  | 13.5 |
+|  🌍 14   |       RFT        |   33B   |              [OFA](https://github.com/OFA-Sys)               | 56.5  | 7.4  |
+|  🌍 15   |  Baichuan2-13B   |   13B   |         [Baichuan](https://www.baichuan-ai.com/home)         | 52.8  | 10.1 |
+|  🔒 16   |     Minerva      |   62B   |               [Google](https://about.google/)                | 52.4  | 27.6 |
+|  🔒 17   |       PaLM       |   64B   |               [Google](https://about.google/)                | 52.4  | 4.4  |
+|  🌍 18   |       RFT        |   13B   |              [OFA](https://github.com/OFA-Sys)               | 52.1  | 5.1  |
+|  🌍 19   |      LlaMA       |   65B   |               [Meta](https://about.meta.com/)                | 50.9  | 10.6 |
+|  🌍 20   |       QWen       |   7B    |             [Alibaba](https://www.alibaba.com/)              | 44.9  | 8.5  |
+|  🔒 21   |    Chinchilla    |   70B   |            [DeepMind](https://www.deepmind.com/)             | 43.7  |  -   |
+|  🌍 22   |     Llama-2      |   34B   |               [Meta](https://about.meta.com/)                | 42.2  | 6.24 |
+|  🔒 23   |    Galactica     |   30B   |               [Meta](https://about.meta.com/)                | 41.7  | 12.7 |
+|  🌍 24   |     ChatGLM2     |   12B   |               [Zhipu](https://www.zhipuai.cn/)               | 40.9  |  -   |
+|  🔒 25   | Text-davinci-002 |  175B   |                [OpenAI](https://openai.com/)                 | 40.7  | 19.1 |
+|  🌍 26   |      Llama       |   33B   |               [Meta](https://about.meta.com/)                | 35.6  | 7.1  |
+|  🔒 27   |      GPT-3       |  175B   |                [OpenAI](https://openai.com/)                 |  34   | 5.2  |
+|  🌍 28   |     InternLM     |   7B    |         [Shanghai AI Lab](https://www.shlab.org.cn/)         | 31.2  |  -   |
+|  🌍 29   |     Llama-2      |   13B   |               [Meta](https://about.meta.com/)                | 28.7  | 3.9  |
+|  🌍 30   |   Vicuna v1.3    |   13B   |                 [LMSys](https://lmsys.org/)                  | 27.6  |  -   |
+|  🌍 31   |      Falcon      |   40B   |    [Technology Innovation Institute](https://www.tii.ae/)    | 19.6  | 2.5  |
+|  🌍 32   |      Llama       |   13B   |               [Meta](https://about.meta.com/)                | 17.8  | 3.9  |
+|  🌍 33   |       MPT        |   30B   |            [MosaicML](https://www.mosaicml.com/)             | 15.2  | 3.1  |
+|  🔒 34   |    Galactica     |  6.7B   |               [Meta](https://about.meta.com/)                | 10.2  | 2.2  |
 
+## Generalization
+
+| Model | GSM8k  | MATH |MathQA | SVAMP |SCQ5K-EN | ARC-E|ARC-C|HellaSwag|MMLU |
+|-----------|------------|----------|--------------|-----------|----------------|---------|----------|---------------|----------|
+| Abel-7B-002 |	**80.44** | **29.28**	| **69.78**	|77.67	|**55.95**	|77.67	|**55.05**	|77.72	|61.19	|
+|MetaMath-Mistral-7B|77.7	|28.2	|33.94	|**79.33**	|37.6|	**78.48**	|51.93	|76.44|	61.93|
+|Qwen-7b|47.84	|9.34	|27.44	|53	|40.05	|74.97	|53.05	|**86.85**|57.98	|
+|Mistral-7b|37.83	|9.06	|25.73	|63	|39.6	|76.83	|53.22|	76.31|**64.05**	|
+|Yi-6b| 32.6	|5.78	|26.98	|55.67	|35.5	|73.66	|49.53	|68.97|64.02	|
+|Abel-7B-001|59.74	|13	|1.21	|57.67	|9.3	|53.32	|38.97	|63.51|40.59	|
+|LLaMA2-7b|12.96	|2.78	|11.52	|44	|28.24	|71.12	|46.61	|71.32|46.7	|
+
+It can be found that:
+
+- Abel performs excellent on mathematical datasets (GSM8K, MATH, MathQA, SVAMP, SCQ5K-EN).
+- It is also competitive on out-of-domain reasoning datasets (ARC-E, ARC-C, HellaSwag), surpassing the baseline Mistral-7b.
+- On the MMLU, Abel-7B-002 only experiences a marginal decrease of 3 points compared to the mistral-7b, while Abel-7B-001 shows a decrease of 6 points compared to LLaMA2-7b.
+
+Evaluation details:
+
+* All evaluation results represent the maximum values of few-shot and zero-shot results.
+* The results of GSM8K, MATH, MathQA, SVAMP and SCQ5K-EN are evaluated by our scripts, while the results of MMLU, ARC-E, ARC-C, HellaSwag are evaluated by [OpenCompass](https://opencompass.org.cn/).
 
 ## Methodology
 
@@ -120,24 +149,24 @@ Our robustness analysis consists of two parts: **Adversarial Evaluation on the [
 The GSM8k_robust dataset is a dataset we established based on the GSM8k dataset. We randomly modified the numbers within the questions of the GSM8k dataset, without altering any other information in the questions, using GPT-4. We also asked GPT-4 to generate the 'golden answers' for the modified questions. After manually reviewing a subset of these samples, we found that all the generated answers for the altered questions were accurate. We utilized the GSM8k_robust dataset to evaluate whether the models overfit the training data, making the models susceptible to out-of-distribution testing samples. Our analysis indicates that Abel is more robust to out-of-distribution testing samples compared to other models.
 
 
-| Model |  GSM8k | GSM8k_robust  | delta |
-| :-----: | :---: | :---: | :---: |
-|  Abel-7B  | 59.74 | 58.23 | -1.51 |
-|  Abel-13B  | 66.41 |  66.57 | +0.16 |
-|  Abel-70B  | 83.62 |  81.80 | -1.82 |
-|  WizardMath-70B  | 81.60 |  74.91  | -6.70 |
-|  WizardMath-13B  | 63.90 |  59.51 | -4.39 |
-|  RFT-7B  | 41.7 | 37.98 | -3.72 |
+|     Model      | GSM8k | GSM8k_robust | delta |
+| :------------: | :---: | :----------: | :---: |
+|    Abel-7B     | 59.74 |    58.23     | -1.51 |
+|    Abel-13B    | 66.41 |    66.57     | +0.16 |
+|    Abel-70B    | 83.62 |    81.80     | -1.82 |
+| WizardMath-70B | 81.60 |    74.91     | -6.70 |
+| WizardMath-13B | 63.90 |    59.51     | -4.39 |
+|     RFT-7B     | 41.7  |    37.98     | -3.72 |
 
 ### Supervised Transfer Learning on the TAL-SCQ5K-EN Dataset
 We demonstrate that Abel-70B not only achieves SOTA on the GSM8k and MATH datasets but also generalizes well to TAL-SCQ5K-EN 2K, a newly released dataset by Math LLM provider TAL (好未來). Our analysis indicates that our SFT approach can successfully generalize Abel to datasets from different distributions. We will conduct further analyses and experiments to explore and improve Abel's generalization capabilities.
 
-| Model | TAL-SCQ5K-EN 2K Testing Benchmark|
-| :-----: | :---: |
-|  Abel-70B  | 59.7 |
-|  MathGPT  | 59.0 |
-|  GPT-4  | 51.0  |
-|  Llama-70B  | 43.8 |
+|   Model   | TAL-SCQ5K-EN 2K Testing Benchmark |
+| :-------: | :-------------------------------: |
+| Abel-70B  |               59.7                |
+|  MathGPT  |               59.0                |
+|   GPT-4   |               51.0                |
+| Llama-70B |               43.8                |
 
 ## Demo
 <img src="./fig/gsm8k_comparison.png">
