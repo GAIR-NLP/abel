@@ -48,7 +48,7 @@ We demonstrate that:
 
 | Model Name        | HF Checkpoints                                               | GSM8k              | MATH               | License                                                      |
 | ----------------- | ------------------------------------------------------------ | ------------------ | ------------------ | ------------------------------------------------------------ |
-| Abel-7B-002 | 🤗 <a href="https://huggingface.co/GAIR/GAIRMath-Abel-70b" target="_blank">7B-002</a> | **80.28**  | **29.28**  | [Apache License 2.0](https://www.apache.org/licenses/) |
+| Abel-7B-002 | 🤗 <a href="https://huggingface.co/GAIR/Abel-7B-002" target="_blank">7B-002</a> | **80.28**  | **29.28**  | [Apache License 2.0](https://www.apache.org/licenses/) |
 | GAIRMath-Abel-70B | 🤗 <a href="https://huggingface.co/GAIR/GAIRMath-Abel-70b" target="_blank">70B</a> | **83.62** (+ 2.02) | **28.26** (+ 5.56) | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
 | GAIRMath-Abel-13B | 🤗 <a href="https://huggingface.co/GAIR/GAIRMath-Abel-13b" target="_blank">13B</a> | **66.41** (+ 2.51) | **17.34** (+ 3.34) | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
 | GAIRMath-Abel-7B  | 🤗 <a href="https://huggingface.co/GAIR/GAIRMath-Abel-7b" target="_blank">7B</a> | **59.74** (+ 4.84) | **13.00** (+ 2.30) | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
@@ -109,19 +109,19 @@ We demonstrate that:
 |Qwen-7b|47.84	|9.34	|27.44	|53	|40.05	|74.97	|53.05	|**86.85**|57.98	|
 |Mistral-7b|37.83	|9.06	|25.73	|63	|39.6	|76.83	|53.22|	76.31|**64.05**	|
 |Yi-6b| 32.6	|5.78	|26.98	|55.67	|35.5	|73.66	|49.53	|68.97|64.02	|
-|Abel-7B-001|59.74	|13	|1.21	|57.67	|9.3	|53.32	|38.97	|63.51|40.59	|
+|Abel-7B-001(GAIRMath-Abel-7b)|59.74	|13	|1.21	|57.67	|9.3	|53.32	|38.97	|63.51|40.59	|
 |LLaMA2-7b|12.96	|2.78	|11.52	|44	|28.24	|71.12	|46.61	|71.32|46.7	|
 
 It can be found that:
 
-- Abel performs excellent on mathematical datasets (GSM8K, MATH, MathQA, SVAMP, SCQ5K-EN).
-- It is also competitive on out-of-domain reasoning datasets (ARC-E, ARC-C, HellaSwag), surpassing the baseline Mistral-7b.
-- On the MMLU, Abel-7B-002 only experiences a marginal decrease of 3 points compared to the mistral-7b, while Abel-7B-001 shows a decrease of 6 points compared to LLaMA2-7b.
+- Abel-002 performs excellent on mathematical datasets (GSM8K, MATH, MathQA, SVAMP, SCQ5K-EN).
+- It is also competitive on out-of-domain reasoning datasets (ARC-E, ARC-C, HellaSwag), surpassing the base model Mistral-7b.
+- On the MMLU, Abel-7B-002 only shows a marginal decrease of 3 points compared to the mistral-7b, while Abel-7B-001 shows a decrease of 6 points compared to LLaMA2-7b.
 
 Evaluation details:
 
-* All evaluation results represent the maximum values of few-shot and zero-shot results.
-* The results of GSM8K, MATH, MathQA, SVAMP and SCQ5K-EN are evaluated by our scripts, while the results of MMLU, ARC-E, ARC-C, HellaSwag are evaluated by [OpenCompass](https://opencompass.org.cn/).
+- All evaluation results is the maximum values of few-shot and zero-shot results.
+- The results of GSM8K, MATH, MathQA, SVAMP and SCQ5K-EN are evaluated by our scripts, while the results of MMLU, ARC-E, ARC-C, HellaSwag are evaluated by [OpenCompass](https://opencompass.org.cn/).
 
 ## Methodology
 
