@@ -48,7 +48,7 @@ We demonstrate that:
 
 | Model Name        | HF Checkpoints                                               | GSM8k              | MATH               | License                                                      |
 | ----------------- | ------------------------------------------------------------ | ------------------ | ------------------ | ------------------------------------------------------------ |
-| Abel-7B-002 | 🤗 <a href="https://huggingface.co/GAIR/Abel-7B-002" target="_blank">7B-002</a> | **80.28**  | **29.28**  | [Apache License 2.0](https://www.apache.org/licenses/) |
+| Abel-7B-002 | 🤗 <a href="https://huggingface.co/GAIR/Abel-7B-002" target="_blank">7B-002</a> | **80.44**  | **29.46**  | [Apache License 2.0](https://www.apache.org/licenses/) |
 | GAIRMath-Abel-70B | 🤗 <a href="https://huggingface.co/GAIR/GAIRMath-Abel-70b" target="_blank">70B</a> | **83.62** (+ 2.02) | **28.26** (+ 5.56) | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
 | GAIRMath-Abel-13B | 🤗 <a href="https://huggingface.co/GAIR/GAIRMath-Abel-13b" target="_blank">13B</a> | **66.41** (+ 2.51) | **17.34** (+ 3.34) | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
 | GAIRMath-Abel-7B  | 🤗 <a href="https://huggingface.co/GAIR/GAIRMath-Abel-7b" target="_blank">7B</a> | **59.74** (+ 4.84) | **13.00** (+ 2.30) | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
@@ -71,7 +71,7 @@ We demonstrate that:
 |   🌍 5   |    WizardMath    |   70B   |           [Microsoft](https://www.microsoft.com/)            | 81.6  | 22.7 |
 |   🔒 6   |  Claude-Instant  | unknown |           [Anthropic](https://www.anthropic.com/)            | 80.9  |  -   |
 |   🔒 7   |     ChatGPT      | unknown |                [OpenAI](https://openai.com/)                 | 80.8  | 34.1 |
-|   🌍 4   | *Abel*-002  |   7B   | 🎓 [GAIR Lab at Shanghai Jiaotong University](https://plms.ai/) | 80.3  | 29.3 |
+|   🌍 4   | *Abel*-002  |   7B   | 🎓 [GAIR Lab at Shanghai Jiaotong University](https://plms.ai/) | 80.4  | 29.5 |
 |   🔒 8   |   ChatGPT-0301   | unknown |                [OpenAI](https://openai.com/)                 | 74.9  |  -   |
 |   🌍 9   | GAIRMath-*Abel*  |   13B   | 🎓 [GAIR Lab at Shanghai Jiaotong University](https://plms.ai/) | 66.4  | 17.3 |
 |  🌍 10   | GAIRMath-*Abel*  |   7B    | 🎓 [GAIR Lab at Shanghai Jiaotong University](https://plms.ai/) | 59.7  | 13.0 |
@@ -104,7 +104,7 @@ We demonstrate that:
 
 | Model | GSM8k  | MATH |MathQA | SVAMP |SCQ5K-EN | ARC-E|ARC-C|HellaSwag|MMLU |
 |-----------|------------|----------|--------------|-----------|----------------|---------|----------|---------------|----------|
-| Abel-7B-002 |	**80.44** | **29.28**	| **69.78**	|77.67	|**55.95**	|77.67	|**55.05**	|77.72	|61.19	|
+| Abel-7B-002 |	**80.44** | **29.46**	| **69.78**	|77.67	|**55.95**	|77.67	|**55.05**	|77.72	|61.19	|
 |MetaMath-Mistral-7B|77.7	|28.2	|33.94	|**79.33**	|37.6|	**78.48**	|51.93	|76.44|	61.93|
 |Qwen-7b|47.84	|9.34	|27.44	|53	|40.05	|74.97	|53.05	|**86.85**|57.98	|
 |Mistral-7b|37.83	|9.06	|25.73	|63	|39.6	|76.83	|53.22|	76.31|**64.05**	|
