@@ -42,7 +42,7 @@ We demonstrate that:
 ## News
 🔥[2023/12/12] We utilized the powerful [Mistral-7B](https://mistral.ai/news/announcing-mistral-7b/) model and incorporated a more diverse set of SFT data, resulting in a stronger and more generalized model, **Abel-7B-002**.
 - Please check the [**Model**](https://github.com/GAIR-NLP/abel/#models-and-performance) and [**Leaderboard**](https://github.com/GAIR-NLP/abel/#Leaderboard-for-Mathematical-Reasoning) for the latest results. We achieved an accuracy of over **80%** on GSM8K for the first time with **7B** model.
-- Refer to the [**Generalization**](https://github.com/GAIR-NLP/abel/#Genelization) section for our evaluation results on the model's generalization capabilities.
+- Refer to the [**Generalization**](https://github.com/GAIR-NLP/abel/#Generalization) section for our evaluation results on the model's generalization capabilities.
 
 ## Models and Performance
 
